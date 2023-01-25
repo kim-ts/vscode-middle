@@ -20,14 +20,14 @@
     $tel3 = $_POST['tel3'];
     $special_pattern = "/[`~!@#$%^&*|\\\'\";:\/?^=^+_()<>]/";
     $lenpass = strlen($pass);
-    if(preg_match("/[\xA1-\xFE][\xA1-\xFE]/", $id)) {
+    if(preg_match("/[\xA1-\xFE]/", $id)) {
 
         echo"id에 한글 입력은 안됩니다.";
 
         }else{
         
-            if(preg_match("/[\xA1-\xFE][\xA1-\xFE]/", $pass)) {
-                    echo "password에 한글입력은 안됩니다.";
+            if(!preg_match("/[0-9]/", $pass)) {
+                    echo "password에 적어도 하나이상의 숫자를 포함하여야합니다.";
             }else{
                 if($lenpass < 7){
                     echo "비밀번호는 7자 이상이어야 합니다.";
