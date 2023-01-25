@@ -16,6 +16,8 @@
     $id = $_POST['id'];
     $pass = $_POST['pass'];
     $tel = $_POST['tel'];
+    $tel2 = $_POST['tel2'];
+    $tel3 = $_POST['tel3'];
     $special_pattern = "/[`~!@#$%^&*|\\\'\";:\/?^=^+_()<>]/";
     $lenpass = strlen($pass);
     if(preg_match("/[\xA1-\xFE][\xA1-\xFE]/", $id)) {
@@ -38,14 +40,14 @@
                             $file = fopen('join.sql', 'a');
                             $connect = mysql_connect("192.168.1.10", "join", "1234");  
                             $dbconn = mysql_select_db("joinhost",$connect);
-                            $return = mysql_query("select id from kyokyo");
-                            $keyy    = mysql_fetch_array($return);
-                            $tel    = $tel ^ $keyy; 
-                            
+                            //$return = mysqli_query("select id from kyokyo");
+                            //$keyy    = mysqli_fetch_array($return);
+                            //$tel2    = $tel2 ^ $keyy; 
+                            //$tel3    = $tel3 ^ $keyy; 
                             $sqlid = mysql_query("select id from member where id='$id'");
                             $result = mysql_fetch_array($sqlid);
 
-                            $sql = "insert into member (id,pass,tel) values('$id','$pass','$tel')";
+                            $sql = "insert into member (id,pass,tel,tel2,tel3) values('$id','$pass','$tel','$tel2','$tel3')";
                             $resultq = mysql_query($sql);
 
                             if($connect){
@@ -59,8 +61,8 @@
                                 echo "db접속실패\n";
                             }
                             if(!($result)){
-                                fwrite($file, "insert into member set id='$id',pass='$pass',tel='$tel';\n");
-                                fclose($file);
+                                //fwrite($file, "insert into member set id='$id',pass='$pass',tel='$tel';\n");
+                                //fclose($file);
                             }else{
                                 echo "이미 있는 아이디입니다.\n";
                             }
