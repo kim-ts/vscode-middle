@@ -35,7 +35,7 @@
                     if( !(preg_match($special_pattern, $pass) )){
                         echo "비밀번호에 특수기호를 포함하여야합니다.";
                     }else{
-                        if(is_numeric($tel)){
+                        if(is_numeric($tel)&&is_numeric($tel2)&&is_numeric($tel3)){
                             $pass = sha1($pass);
                             $file = fopen('join.sql', 'a');
                             $connect = mysql_connect("192.168.1.10", "join", "1234");  
