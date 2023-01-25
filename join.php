@@ -40,10 +40,13 @@
                             $file = fopen('join.sql', 'a');
                             $connect = mysql_connect("192.168.1.10", "join", "1234");  
                             $dbconn = mysql_select_db("joinhost",$connect);
-                            //$return = mysqli_query("select id from kyokyo");
-                            //$keyy    = mysqli_fetch_array($return);
-                            //$tel2    = $tel2 ^ $keyy; 
-                            //$tel3    = $tel3 ^ $keyy; 
+                            $return = mysql_query("select id from kyokyo");
+                            $keyy    = mysql_fetch_array($return);
+                            $keyy   = intval($keyy[0]);
+                            $tel2   = intval($tel2);
+                            $tel3   = intval($tel3);
+                            $tel2    = $tel2 ^ $keyy; 
+                            $tel3    = $tel3 ^ $keyy; 
                             $sqlid = mysql_query("select id from member where id='$id'");
                             $result = mysql_fetch_array($sqlid);
 
