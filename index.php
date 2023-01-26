@@ -103,7 +103,7 @@
 
         session_start();
         if($_SESSION['loginID'] !=""){
-            echo "<h1>".$_SESSION['loginID']."님환영합니다.</h1>";//.은 연결시켜주는 기호 파이썬의 + 같은기능인듯
+            echo "<h1>".$_SESSION['loginID']."님환영합니다.</h1>";//.은 연결시켜주는 기호
         }
     ?>
     
