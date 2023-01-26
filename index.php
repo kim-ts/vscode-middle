@@ -1,33 +1,4 @@
-<!-- <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            파랑풍선ariplane
-        </title>
-        <style>
-            body{
-                background-color: rgb(255, 255, 255) ;
-                background-size: 100%;
-            }
-            .font{
-                text-align: center;
-                align-items: center;
-                font-weight: bold ;
-                font-size: 15px;
-            }
-        </style>
 
-    </head>
-    <body>
-        <img src="plane.png" style="width: 100px; height: 100px; position: relative; clear: both;">
-        <div class="font">
-            <pre>
-                <a href="login.html">로그인</a>     <a href="pb.php">비행기 예약하기</a>     <a href="join.html">회원가입</a>
-            </pre>
-        </div>
-        <img src="mang.png" style="width: 300px;height: 300px;" >
-    </body>
-</html> -->
 <?php
     //클라이언트 요청 메시지에 'popup' 쿠키값이 없다면 if 명령 실행
     if($_COOKIE['popup'] == ""){
