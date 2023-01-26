@@ -25,7 +25,7 @@
         echo"id에 한글 입력은 안됩니다.";
 
         }else{
-            if(!preg_match("/[\x{1100}-\x{11FF}]/",$pass)){
+            if(!preg_match("/[a-zA-Z]/",$pass)){
                         echo "password에 적어도 하나이상의 영어문자를 포함하여야합니다.";
                 }else{
 
