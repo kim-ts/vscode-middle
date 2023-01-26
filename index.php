@@ -118,7 +118,8 @@
         </div>
         <div class="text">
         <pre>
-        <a href="cookie.php">1주일간 팝업 보지않기</a>     <a href="login.html">LogIn</a>     <a href="logout.php">Logout</a>       <a href="join.html">회원가입</a>        <a href="pb.html">회원탈퇴</a> 
+        <a href="cookie.php">1주일간 팝업 보지않기</a>     <a href="login.html">LogIn</a>     <a href="logout.php">Logout</a>       <a href="join.html">회원가입</a>        <a href="pb.html">회원탈퇴</a> <br>
+                                       <a href="plane.php">예약 페이지</a> 
         </pre></div>
     
         <div class="teamname">
